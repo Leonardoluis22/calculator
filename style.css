@@ -5,9 +5,9 @@ body {
   box-sizing: border-box;
 }
 .container {
-  width: 200px;
-  height: 250px;
-  background: gray;
+  width: 250px;
+  height: 350px;
+  background: rgb(68, 66, 66);
   padding: 5px;
   margin: 50px auto auto auto;
   display: grid;
@@ -15,13 +15,25 @@ body {
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 1px;
 }
+.box-item {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+
+.container #display {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: x-large;
+  background: gray;
+  margin: 3px 0 5px 0;
+  padding: 5px;
+}
+
 #display {
-  background: rgb(154, 158, 154);
   grid-column-start: 1;
   grid-column-end: 5;
-
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
 }
 .plus {
   grid-column-start: 4;
