@@ -1,35 +1,19 @@
-let $display = document.querySelector('#display');
+//Select keys
+const keys = document.querySelectorAll('.btn-item');
 
-function btntypeValue() {
-  let btn = document.getElementsByClassName('btn-item');
-  let val = null;
+//Function for calc
 
-  for (let i = 0; i < btn.length; i++) {
-    switch (btn[i]) {
-      case btn[0]:
-        val = clear();
-        break;
-      case btn[1]:
-        val = 'x';
-        break;
-      case btn[2]:
-        val = '%';
-        break;
-      case btn[3]:
-        val = '/';
-        break;
-      default:
-        break;
-    }
+//Add value as display
+/*
+function getKeyCode(event) {
+  let keyCode;
+  const isKeyBoard = event.type === 'keydown';
+  if (!isKeyBoard) {
+    keyCode = event.keyCode;
   }
-  return val;
 }
 
-document.addEventListener('click', function () {
-  let btnValue = btntypeValue();
-  alert(btnValue);
+keys.forEach(function (key) {
+  key.addEventListener('cick');
 });
-
-function clear() {
-  $display.textContent = '';
-}
+*/
