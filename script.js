@@ -1,19 +1,31 @@
-//Select keys
+//Select all keys
 const keys = document.querySelectorAll('.btn-item');
 
-//Function for calc
-
-//Add value as display
-/*
-function getKeyCode(event) {
-  let keyCode;
-  const isKeyBoard = event.type === 'keydown';
-  if (!isKeyBoard) {
-    keyCode = event.keyCode;
-  }
+//Select num
+function selectNum(event) {
+  //keyCode
+  let numkeyCode = getKeyCode(event);
+  //typed or pressed key
+  const key = document.querySelector(`[data-code="${numkeyCode}"]`);
+  console.log(key);
 }
 
+function getKeyCode(event) {
+  let keyCode;
+
+  const isKeyboard = event.type === 'keydown';
+  if (isKeyboard) {
+    keyCode = event.keyCode;
+  } else {
+    keyCode = event.target.dataset.code;
+  }
+  return keyCode;
+}
+
+//click with mouse
 keys.forEach(function (key) {
-  key.addEventListener('cick');
+  key.addEventListener('click', selectNum);
 });
-*/
+
+//keybord type
+window.addEventListener('keydown', selectNum);
